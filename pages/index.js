@@ -60,7 +60,7 @@ export default function Home() {
 
                             {t6mats.map((mat, index) => {
                                 return (
-                                    <td>{materials?.[mat.ID]?.[TP_CONSTANTS.TPITEM.BUY_ORDERS]?.[TP_CONSTANTS.BUY_ORDER.UNIT_PRICE] / 100}s / {materials?.[mat.ID]?.[TP_CONSTANTS.TPITEM.SELL_ORDERS]?.[TP_CONSTANTS.SELL_ORDER.UNIT_PRICE] / 100}s </td>
+                                    <td key={inde}>{materials?.[mat.ID]?.[TP_CONSTANTS.TPITEM.BUY_ORDERS]?.[TP_CONSTANTS.BUY_ORDER.UNIT_PRICE] / 100}s / {materials?.[mat.ID]?.[TP_CONSTANTS.TPITEM.SELL_ORDERS]?.[TP_CONSTANTS.SELL_ORDER.UNIT_PRICE] / 100}s </td>
                                 )
                             })}
                         </tr>
@@ -69,7 +69,7 @@ export default function Home() {
                                 const price = materials?.[mat.ID]?.[TP_CONSTANTS.TPITEM.BUY_ORDERS]?.[TP_CONSTANTS.BUY_ORDER.UNIT_PRICE] * 250 / 100 / 100;
                                 t6setPrice = t6setPrice + price;
                                 return (
-                                    <td>{price}G </td>
+                                    <td key={index}>{price}G </td>
                                 )
                             })}
                         </tr>
